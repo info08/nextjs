@@ -20,7 +20,7 @@ export default function LoginPage() {
     try {
       const response = await axios.post('/api/login', user);
       console.log('Login successful:', response.data);
-      let userInfo = response.data.user;
+      const userInfo = response.data.user;
       // Redirect to the dashboard or home page after successful login
       // set the tokken in cookie
       document.cookie = `token=${userInfo.token}; path=/; max-age=3600`; // Set token with 1 hour expiration
@@ -65,7 +65,7 @@ export default function LoginPage() {
             Login
           </button>
           <p className="mt-4 text-sm text-center">
-            Don't have an account? <Link href="/signup" className="text-blue-600 hover:underline">Sign Up</Link>
+            Don&#39t have an account? <Link href="/signup" className="text-blue-600 hover:underline">Sign Up</Link>
           </p>
           <p className="mt-2 text-sm text-center">
             <Link href="/forgot-password" className="text-blue-600 hover:underline">Forgot Password?</Link>

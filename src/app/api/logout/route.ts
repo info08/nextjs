@@ -1,9 +1,9 @@
 import { connectDB } from "@/dbConfig/dbConfig";
-import User from "@/models/userModel";
-import { ok } from "assert";
-import {NextRequest, NextResponse } from "next/server";
+//import User from "@/models/userModel";
+//import { ok } from "assert";
+import {NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     await connectDB();
     // Clear the session or token here if applicable

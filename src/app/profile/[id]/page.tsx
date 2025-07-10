@@ -1,9 +1,9 @@
 "use client";
 import React from 'react';  
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import axios from 'axios';
+//import { useRouter } from 'next/navigation';
+//import { useState } from 'react';
+//import axios from 'axios';
 
 
 export default function UserProfilePage({params}: {params: {id: string}}) {

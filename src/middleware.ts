@@ -5,7 +5,7 @@ export function middleware(request: NextRequest) {
   const path= request.nextUrl.pathname;
 
    const isPublicPath = path === '/' || path === '/login' || path === '/signup';
-   const isProfilePath = path.startsWith('/profile/');
+   //const isProfilePath = path.startsWith('/profile/');
    const token = request.cookies.get('token')?.value || '';
    if(isPublicPath && token) {
      // If the user is authenticated and trying to access a public path, redirect to their profile

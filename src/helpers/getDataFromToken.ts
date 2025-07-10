@@ -8,7 +8,7 @@ export function getDataFromToken(request: NextRequest) {
 
   try {
     // Assuming the token is a simple string, you can decode it or parse it as needed
-    const userData = JSON.parse(atob(token)); // Example of decoding a base64 encoded token
+    //const userData = JSON.parse(atob(token)); // Example of decoding a base64 encoded token
     return token;
   } catch (error) {
     console.error("Error decoding token:", error);

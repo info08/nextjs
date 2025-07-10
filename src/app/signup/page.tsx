@@ -1,5 +1,5 @@
 "use client";
-import React ,{useState , useEffect} from 'react';
+import React ,{useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 //import {axios} from 'axios';
@@ -26,7 +26,7 @@ export default function SignupPage() {
 
       if (response.ok) {
         const data = await response.json();
-        alert(data.message);
+        //alert(data.message);
         router.push('/login'); // Redirect to login page after successful signup
         console.log('Signup successful:', JSON.stringify(data));
         // Redirect or show success message
