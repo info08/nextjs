@@ -1,12 +1,16 @@
 "use client";
-import React from 'react';  
+import React ,{FC} from 'react';  
 import Link from 'next/link';
 //import { useRouter } from 'next/navigation';
 //import { useState } from 'react';
 //import axios from 'axios';
 
+interface PageProps {
+  params: { id: string };
+}
 
-export default function UserProfilePage({params}: {params: {id: string}}) {
+
+ const UserProfilePage: FC<PageProps> = ({ params }) => {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
@@ -19,3 +23,5 @@ export default function UserProfilePage({params}: {params: {id: string}}) {
     </div>
   );
 }
+
+export default UserProfilePage;
