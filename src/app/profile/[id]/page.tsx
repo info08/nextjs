@@ -10,7 +10,7 @@ interface PageProps {
 }
 
 
- const UserProfilePage: FC<PageProps> = ({ params }) => {
+export default function Page({ params }: PageProps) {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
@@ -23,5 +23,3 @@ interface PageProps {
     </div>
   );
 }
-
-export default UserProfilePage;
