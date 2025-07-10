@@ -4,7 +4,7 @@ import { NextResponse, NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
   const path= request.nextUrl.pathname;
 
-   const isPublicPath = path === '/' || path === '/login' || path === '/signup';
+   const isPublicPath = path === '/' || path === '/login' || path === '/signup' || path ==='https://nextjs-4s8h6zjrg-prashants-projects-2e8ee769.vercel.app';
    //const isProfilePath = path.startsWith('/profile/');
    const token = request.cookies.get('token')?.value || '';
    if(isPublicPath && token) {
